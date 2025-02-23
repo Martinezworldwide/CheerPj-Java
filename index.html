@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Applet on GitHub Pages</title>
-    <script type="text/javascript" src="https://cjrtnc.leaningtech.com/cheerpj/2.2/cheerpj.js"></script>
+    <script src="https://cjrtnc.leaningtech.com/3.1/cj3loader.js"></script>
 </head>
 <body>
-    <h2>Java Applet Running on GitHub Pages with CheerpJ</h2>
-    
-    <!-- Load the Java Applet -->
+    <h2>Running Java Applet with CheerpJ on GitHub Pages</h2>
     <script>
-        // Load the CheerpJ runtime
-        cheerpjInit();
-
-        // Load the Applet class file
-        cheerpjRunApplet("ProductPreview", "300", "150");
+        (async function () {
+            await cheerpjInit();
+            cheerpjCreateDisplay(600, 400);
+            await cheerpjRunJar("/app/ProductPreview.jar");
+        })();
     </script>
-
 </body>
 </html>
+
